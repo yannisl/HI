@@ -1,0 +1,399 @@
+\documentclass[a4paper, justified]{tufte-book}
+\usepackage{microtype}
+\usepackage{booktabs,tabularx,booktabs,longtable,caption}
+
+\usepackage{pgfgantt}
+
+
+
+\newcounter{tsection}
+\setcounter{tsection}{1}
+
+\newcounter{ms}[tsection]
+
+\newcounter{tsections}[tsection]
+
+
+\def\inc{\stepcounter{tsections}%
+     \ifnum10>\thetsection % 
+         \thesection.\thetsections\else%
+         \thetsection.\thetsections \fi}
+
+
+\def\service{M}
+
+\def\msinc{\stepcounter{ms}
+   \ifnum10>\thems MS-\service-00\thems\  \else MS-\service-0\thems\  \fi }
+
+%% dates for milestones
+\def\milestonei{30 Sep 2013}
+\def\milestoneii{30 Oct 2013}
+\def\milestoneiii{30 Nov 2013}
+\def\milestoneiv{30 Dec 2013}
+\def\milestonev{30 Jan 2014}
+
+\def\milestonevi{30 Apr 2014}
+\def\milestonevii{30 May 2014}
+\def\milestoneviii{30 June 2014}
+\def\milestoneix{30 July 2014}
+\def\milestonex{15 Aug 2014}
+
+
+\begin{document}
+\chapter{Method Statements}
+
+\section*{Installation Method Statements}
+
+We are providing a schedule of Installation Method Statements as shown in Table~\ref{msinstallation}. The second schedule shown in Table~\ref{mscommissioning}, lists Method Statements that we propose to use during Testing and Commisioning. We are providing target dates for completion. Please note that we expect to complete this activity by Jan 30, 2014. More detailed dates will be provided and tracked as per Document Control tracking sheets (see example in Fig. 1).  We may have to revisit some of the dates based on the procurement and material submittal progress. For some of the specialty services we have projected that information will be released over the next 90 days or earlier.  Emphasis has been given to first fix installations and any testing associated with it, such as water pressure tests. 
+
+As the Method Statements and materials according to the drawings and specifications are common, only one set of Method Statements will be developed covering the whole development. Should the need arise to modify a particular Method Statement for a particular Hotel we will add these to the schedules at request.
+
+\section*{Commissioning Method Statements}
+
+We envisage to introduce Commissioning Planning and Method Statements as early as possible and these have been scheduled to start by April next year. 
+
+\clearpage
+
+\captionof{table}{List of Services and Projected Installation Method Statements.}
+\label{masterplan}
+{\RaggedRight\small
+\begin{longtable}{l p{3.5cm}ll}
+%\begin{tabular}{llll}
+\toprule
+Ref	&Package	&Method Statements & Target Date   \\
+\midrule
+\stepcounter{tsection}%
+\thetsection.0	&\textbf{Mechanical}	&	& \\
+\inc	&Piped Systems	& \msinc Piping Fabrication, Erection, Inspection \& Testing 	&\milestonei \\
+      
+  &                       & \msinc Heat Exchangers                          &\milestoneiii\\
+     &                           & \msinc Pumps                                         &\milestoneiii\\
+
+\inc&Ducted Systems  & \msinc Installation of GI HVAC Duct Work 	&\milestonei \\
+        &                         & \msinc Installation of HVAC Dampers \& Accessories   &\milestonei \\
+&           &\msinc Air Leakage Testing of Duct Work     &\milestonei \\
+
+\inc & HVAC Equipment  & \msinc Installation of Fans \& Accessories   &\milestoneii \\
+
+     &                       & \msinc Fan Coil Units (FCU)            &\milestoneii \\
+
+     &                      &\msinc Air Handling Units (AHU)        &\milestoneiii \\
+
+    
+     &                           &\msinc Split System Air Conditioning Units &\milestonev \\
+     &		 		&\msinc Installation of Refrigerant  Piping    &\milestonev \\
+     &                           &\msinc Close Control Units                       &\milestonev \\
+     &                          &\msinc Air  Inlets \& Outlets (All Type)       &\milestoneii \\
+
+     &                          &\msinc Terminal Units  (VAV \& CAV Units)  &\milestoneii \\
+     &                          &\msinc Duct Mounted Electric Heaters         &\milestoneii \\
+     &                          &\msinc Seismic Bracing                             &\milestonei \\
+\inc     & Insulation            &\msinc Insulation of Piping, Duct Work \& Equipment &\milestonei \\
+\inc   &Kitchen Extract System & \msinc Installation Kitchen Exhaust Carbon Steel Ductwork &\milestoneii \\
+	&				    & \msinc Installation Stainless Steel Ductwork &\milestoneii \\
+
+
+\inc	&Car Park Ventilation 	& \msinc Jet Fans and CO Monitoring System  &\milestoneii  \\
+
+%\inc	&Condenser Water System 	& N/A & N/A   \\
+%\inc    &Cooling Tower &N/A &N/A  \\
+\midrule
+
+\stepcounter{tsection}
+\gdef\service{PL}
+\thetsection	&\textbf{Public Health}		&&\\
+\inc	&Domestic Water	&\msinc Domestic Water Piping System (H\&C) Installation \& Testing &\milestoneii  \\	
+
+\inc	&Above Ground Drainage &\msinc  Above Ground Drainage Installation \& Testing &\milestoneii \\		
+\inc	&Below Ground Drainage  &\msinc Below Ground Drainage Installation \& Testing &\milestonei \\		
+        &                                   &\msinc Sump Pumps                                                &\milestoneii \\
+        &                                   &\msinc Water Storage Tank                                       &\milestoneiii \\
+        &                                   &\msinc Sanitary ware Installation                               &\milestonev \\
+        &                                   &\msinc Pod Installation                                              &\milestoneiii \\
+        &                                   &\msinc  Water Heaters/Calorifiers                               &\milestoneiii \\
+\inc	&Water Features	     &\msinc Installation and Testing of Water Feature Systems&\milestonev \\	
+\inc        & Irrigation                     &\msinc Installation and Testing of Irrigation Systems &\milestonev \\
+\inc	&Gas Supply Installations	&\msinc Installation and Testing of Gas Supply Systems &\milestoneiii \\
+\inc	&Gas Fired Boilers &\msinc Installation and Factory Testing Boilers &\milestoneiii \\	
+\inc  & Gray Water Treatment &\msinc Installation of Gray Water Treatment System &\milestoneiii \\
+
+\midrule	
+\stepcounter{tsection}\setcounter{ms}{0}%
+\gdef\service{FP}%	
+\thetsection.0	&\textbf{Fire Defense} &&\\	
+\inc	&FHC, FH and Sprinkler Installations.	&\msinc FHC, FH and Sprinkler Installation \& Testing &\milestoneii \\
+\inc  &                                                      &\msinc  Painting of Fire Protection Piping &\milestoneii \\
+\inc  &                                                      &\msinc Identification and Tagging  FP Services    &\milestoneiii \\	
+\inc	&Smoke Exhaust		&\msinc Installation of Smoke Extract Systems  &\milestoneii  \\
+\inc	&Staircase Pressurization          &\msinc Installation of Staircase Pressurization Systems &\milestoneii \\		
+\inc	&FM-200		&\msinc Installation and Testing of FM-200 Systems  &\milestoneiii \\
+\inc	&ANSUL Kitchen Hoods &\msinc Installation of Kitchen Hood Ext. System  &\milestoneiii \\
+	
+\midrule
+
+\clearpage
+
+\stepcounter{tsection}\gdef\service{EL}\setcounter{ms}{0}
+	&\textbf{Electrical}	&&\\
+\inc        &General  &\msinc Installation of Cable Tray, Trunking \& Ladder      &\milestonei \\
+        & &\msinc Installation Wires \& Power Cables for Building (MV \& LV)  &\milestoneii \\
+        & &\msinc Installation of Raceways \& Boxes & \milestonei \\
+        & &\msinc ELV System Cable Pulling&\milestoneii \\
+        & &\msinc Installation of Panel Boards &\milestoneii \\
+	& &\msinc Busbar Assemblies &\milestoneiii \\
+        & &\msinc Installation of MV Switchgear & \milestoneii \\
+        & &\msinc Installation of MCC (Motor Control System) &\milestoneii \\
+	& &\msinc Installation of Main LV \& MV Switchgear &\milestoneiii \\
+	& &\msinc Installation of Capacitor Bank &\milestoneiii \\
+        & &\msinc Installation of ATS& \milestoneiii \\
+\inc	&Standby Generators	&\msinc Installation and Factory Testing of Standby Generators &\milestoneiii  \\
+\inc	&Medium Voltage System	& &\\	
+\inc	&Low Voltage System		&\msinc Small Power \& Interior Lighting System &\milestoneii  \\
+\inc	&Earthing \& Lightning Protection &\msinc Earthing \& Bonding System &\milestoneii \\
+        &						&\msinc Lightning Protection System &\milestoneii \\		
+
+
+\inc	&Lighting \& Emergency Lighting  &\msinc Lighting Control System &\milestoneiii \\	
+        &                                                 &\msinc Emergency Lighting System&\milestoneiii \\	
+        &                                                &\msinc Emergency Exit System&\milestoneiii \\
+
+\inc	&Aircraft Warning System &\msinc Installation of Aircraft Warning System &\milestoneiii \\	
+	
+\inc	&UPS System	&\msinc Installation of UPS System &\milestoneiii  \\	
+\midrule
+
+\stepcounter{tsection}\gdef\service{ELV}\setcounter{ms}{0}
+	&\textbf{Specialist Services}		&&\\
+\inc	&Building Management System	&\msinc Installation and Testing of BMS System &\milestoneii \\	
+\inc	&Security Access Control \& CCTV	&\msinc Installation and Testing of Security, ACS, CCTV Systems &\milestoneiii \\	
+\inc	&CO Monitoring		&\msinc Installation and Testing of CO Monitoring System  &\milestoneiii \\
+\inc	&Car Calling System	&\msinc Installation and Testing of Car Calling System &\milestonev\\
+
+\inc	&Lighting Control		&\msinc Installation and Testing of Lighting Control System &\milestoneiii \\
+
+\inc	&Structured Cabling		&\msinc Installation and Testing of Structured Cabling &\milestoneiii \\
+
+\inc	&PA \& Background Music System &\msinc Installation and Testing of Music System &\milestoneiii \\		
+\inc	&IPTV \& Satellite System	&\msinc Installation and Testing of IPTV Systems &\milestoneiii \\	
+\inc	&Room Management System	& \msinc Installation and Testing of Room Management System &\milestoneiii \\
+
+\inc  & Master Clock & \msinc Master Clock System Installation and Testing&\milestoneiii \\
+\inc  & Audio/Video System  &\msinc Audio/Video Systems Installation and Testing &\milestoneiv\\
+\inc  &&\msinc Car Parking Management Installation and Testing &\milestoneiv\\
+\inc  &Wi-fi&\msinc WI-FI &\milestoneiv \\
+\bottomrule
+		
+\end{longtable}
+\label{msinstallation}
+}
+%% End Installation Method Statements
+
+\clearpage
+
+\captionof{table}{List of Services and Projected T\&C Method Statements.}
+\label{masterplan}
+{\RaggedRight\small
+\begin{longtable}{l p{3.5cm}ll}
+%\begin{tabular}{llll}
+\toprule
+Ref	&Package	&Method Statements & Target Date   \\
+\midrule
+\stepcounter{tsection}%
+\gdef\service{TC-M}%
+\thetsection.0	
+&\textbf{Mechanical}	&	& \\
+\inc	& HVAC Systems			& \msinc Wild Air Methodology 					&\milestonevi \\
+\inc   &                                     		& \msinc CHW System Flushing \& Chemical Treatment &\milestonevi\\      
+       	&                      		 	& \msinc Heat Exchangers                          			&\milestonevi\\
+       	&                           			& \msinc Pumps                                    			&\milestonevi\\
+       	&                          			& \msinc Pressurization Units                  			&\milestonevii\\
+   	& 						& \msinc Air \& CHW Balancing	 				&\milestonevii \\
+ 	&  						& \msinc T\&C Fans   							&\milestonevii \\
+    	&                       			& \msinc Fan Coil Units (FCU)            				&\milestonevii \\
+    	&                      			&\msinc Air Handling Units (AHU)        				&\milestonevii \\
+     	&                           			&\msinc Split System Air Conditioning Units 			&\milestoneviii \\
+        &                           			&\msinc Close Control Units                       			&\milestoneviii \\
+  	&                          			&\msinc Terminal Units  (VAV \& CAV Units)  		&\milestoneviii \\
+     	&                          			&\msinc Duct Mounted Electric Heaters         		&\milestoneviii \\
+\inc   &Kitchen Extract System 		& \msinc T\&C Kitchen Exhaust Systems  			&\milestonevii \\
+	&Laudry \&Dish-washer		& \msinc T\&C Laundry \& Dish-washer Exhaust Systems&\milestonevii \\
+\inc	&Car Park Ventilation 			& \msinc T\&C Jet Fans and CO Monitoring System  	&\milestoneviii  \\
+%\inc	&Condenser Water System 	& N/A & N/A   \\
+%\inc    &Cooling Tower &N/A &N/A  \\
+\midrule
+
+\stepcounter{tsection}
+\gdef\service{TC-PL}
+\thetsection	&\textbf{Public Health}		&&\\
+\inc	&Domestic H\&C Systems	&\msinc Disinfection of Domestic Water System &\milestoneviii  \\	
+	&					&\msinc Filtration and Chemical Treatment &\milestoneviii  \\	
+	&				  	&\msinc Domestic Water - System Operation &\milestoneviii \\		
+
+        &                                   	&\msinc LTHW Water Treatment                                 &\milestoneviii \\
+        &                                   	&\msinc Plumbing Transfer and Booster Pumps                               &\milestoneix \\
+        &                                   	&\msinc  Water Heaters/Calorifiers                               &\milestoneix \\
+\midrule
+\inc	&Water Features	     	&\msinc Installation and Testing of Water Feature Systems&\milestoneix \\	
+\inc   & Irrigation                  	&\msinc  T\&C  Irrigation Systems &\milestoneix \\
+\midrule
+\inc	&Gas Supply Installations	&\msinc  T\&C  Gas Supply Systems &\milestonex \\
+\inc	&Gas Fired Boilers &\msinc T\&C Boilers &\milestonex \\
+\midrule
+\inc   &Drainage                         &\msinc T\&C Sump Pumps                                                &\milestoneviii \\	
+\inc  	& Gray Water Treatment 	&\msinc T\&C Gray Water Treatment System &\milestoneix \\
+
+\midrule	
+\stepcounter{tsection}\setcounter{ms}{0}%
+\gdef\service{TC-FP}%	
+\thetsection.0		
+	&\textbf{Fire Defense} 					&		&\\
+\inc	&Fire Protection	&\msinc T\&C Fire Pumps 		&\milestonevii \\	
+\inc	&			&\msinc T\&C FHC, FH and Sprinkler Installation \& Testing 	 &\milestonevii \\
+\inc  &                      &\msinc  T\&C Fire Panels (ATS)						 &\milestonevii \\
+\inc	&FM-200		&\msinc  T\&C FM-200 Systems  &\milestonevii \\
+\inc	&FM-200		&\msinc Integrity Testing  FM-200 Rooms &\milestonevii \\	
+\inc	&Smoke Exhaust		&\msinc T\&C  Smoke Extract Systems  &\milestonevi  \\
+\inc	&Staircase Pressurization          &\msinc T\&C Staircase Pressurization Systems &\milestonevi \\		
+
+\inc	&ANSUL Kitchen Hoods &\msinc T\&C Kitchen Hood Fire. Ext. System  &\milestonevii \\
+
+	
+\midrule
+
+\clearpage
+
+\stepcounter{tsection}\gdef\service{TC-EL}\setcounter{ms}{0}
+	&\textbf{Electrical}	&&\\
+\inc   &General  &\msinc Energization and Lock and Key System      &\milestonevi \\
+        & &\msinc T\&C MCC Boards &\milestonevi \\
+	& &\msinc T\&C SMDB and DBs &\milestonevii \\
+        & &\msinc T\&C MV Switchgear & \milestonevii \\
+       	& &\msinc T\&C Capacitor Banks &\milestonevii \\
+        & &\msinc Installation of ATS& \milestonevii \\
+\inc	&Standby Generators	&\msinc T\&C Standby Generators &\milestoneix  \\
+	
+\inc	&Low Voltage System		&\msinc T\&C Small Power \& Interior Lighting System &\milestoneix  \\
+\inc	&Earthing \& Lightning Protection &\msinc T\&C Earthing \& Bonding System &\milestoneix \\
+        &						&\msinc T\&C Lightning Protection System &\milestoneix \\		
+
+
+\inc	&Lighting \& Emergency Lighting  &\msinc T\&C Lighting Control System &\milestoneix \\	
+        &                                                 &\msinc T\&C Emergency Lighting System&\milestoneix \\	
+        &                                                &\msinc T\&C Emergency Exit Light Systems&\milestoneix \\
+	&                                                &\msinc T\&C Facade Lighting&\milestoneix \\
+
+\inc	&Aircraft Warning System &\msinc T\&C Aircraft Warning System &\milestonex \\	
+	
+\inc	&UPS System	&\msinc T\&C  UPS System &\milestonex  \\	
+\midrule
+
+\stepcounter{tsection}\gdef\service{TC-ELV}\setcounter{ms}{0}
+	&\textbf{Specialist Services}		&&\\
+\inc	&Building Management System	&\msinc T\&C  BMS System &\milestonex \\	
+\inc	&Security Access Control \& CCTV	&\msinc T\&C Security and ACS System  &\milestonex \\	
+\inc	&CO Monitoring		&\msinc T\&C CO Monitoring System  &\milestonex \\
+\inc	&Car Calling System	&\msinc T\&C Car Calling System &\milestonex\\
+
+\inc	&Lighting Control		&\msinc T\&C Lighting Control System &\milestonex \\
+
+\inc	&Structured Cabling		&\msinc T\&C Data and Telephone Systems &\milestonex \\
+
+\inc	&PA \& Background Music System &\msinc T\&C  Music System &\milestonex \\		
+\inc	&IPTV \& Satellite System	&\msinc T\&C  IPTV Systems &\milestonex \\	
+\inc	&Room Management System	& \msinc T\&C Room Management System &\milestonex \\
+
+\inc  & Master Clock & \msinc T\&C Master Clock System&\milestonex \\
+\inc  & Audio/Video System  &\msinc T\&C Audio/Video Systems &\milestonex\\
+\inc  &Car Parking&\msinc T\&C Car Parking Management &\milestoneviii\\
+\inc  &Wi-Fi&\msinc T\&C WI-FI &\milestoneviii\\
+\bottomrule
+		
+\end{longtable}
+\label{mscommissioning}
+}
+
+
+
+\end{document}
+\chapter{Materials Planning}
+\section{Materials}
+
+Fire Protection constraints, currently include better definition of scope, ID and RCP drawings and resolution of Value Engineering elements in the basements, where HLS has proposed savings based on the provision of Jet Fans for Car Park Ventilation. The constraints hamper full co-ordination of services, especially in the basements where work fronts are open or are expected to open soon for site works. A preliminary plan is shown in Figure~\ref{firealarm}.
+\begin{table}[h]
+\caption{Fire Protection Constraints and Key Dates}
+\begin{tabular}{llc}
+\toprule
+Constraint         & Expected Resolution Date & Action By\\
+\midrule
+Jet Fan resolution & &\\
+ID Typical Rooms   & & ID\\
+Corridor High Rise & & ID\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The plan aims to complete the first round of Shop Drawings by end January 2013. The plan does not factor at this stage, the full submittal and approval process which we have lumped as adding only one consecutive month to the process.
+
+\section{Planning Rationale and Priority Areas}
+
+The plan gives priority to the basements and high-rise areas. Between them they cover approximately  two thirds (235,873 m$^2$) of the total development area (350,000 m$^2$). Although we expect that the difficult areas will be the Podia, we left these areas last to give the ID Professional Team time to develop the design. 
+
+
+
+
+
+\pagestyle{empty}
+
+
+\hspace*{-1.8cm}
+\begin{figure*}
+\begin{ganttchart}[y unit chart=.8cm]{1}{26}
+\gantttitle{Sep 2012-Feb 2013}{26}\\
+\gantttitle{Materials Planning --- Subcontracts}{26} \\
+
+\gantttitlelist{1,...,26}{1} \\
+\ganttgroup{Group 2}{1}{25} \\
+\ganttmilestone{Car Park Ventilation Specialist}{4} \ganttnewline
+\ganttmilestone{Appoint Fire Specialist Firm}{4} \ganttnewline
+
+\ganttlinkedbar[bar/.style={fill=purple}]{FP CAD Mobilization}{5}{6} \\
+\ganttlinkedbar[bar/.style={fill=purple}]{ELV Shafts and Schematics}{7}{16} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=purple}]{ELV Rooms/Details}{17}{20} \ganttnewline
+
+\ganttmilestone[bar/.style={fill=purple}]{RCP/ID Typical Rooms}{6} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=purple}]{W-typical rooms}{7}{11} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=purple}]{Westdin typical rooms}{7}{11} \ganttnewline
+
+\ganttmilestone[bar/.style={fill=purple}]{RCP/ID Corridors/Lobbies}{11} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=purple}]{W-highrise}{12}{16} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=purple}]{Westdin highrise}{12}{16} \ganttnewline
+
+\ganttmilestone{Alternative Jet Fans}{7} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=purple}]{Basement B3}{8}{12} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=purple}]{Basement B2}{8}{12} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=purple}]{Basement B1}{8}{12} \ganttnewline
+
+\ganttmilestone{ID/RCP}{16} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=purple}]{W-GF}{17}{21} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=purple}]{Westdin GF}{17}{21} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=purple}]{St Regis GF}{17}{21} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=purple}]{St Regis L1-2}{17}{21} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=purple}]{St Regis L3-4}{17}{21} \ganttnewline
+
+\ganttlinkedbar[bar/.style={fill=purple}]{St Regis L5-6}{17}{21} \ganttnewline
+
+\ganttlinkedbar[bar/.style={fill=blue}]{Fire Alarm Matrices}{21}{25} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=blue}]{Mimic Panels}{21}{25} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=blue}]{Fire Ventilation Panels}{21}{25} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=blue}]{Fire Command Centre}{21}{25} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=blue}]{Interface Matrix}{21}{25} \ganttnewline
+
+\ganttlink{elem5}{elem6}
+\ganttlink{elem8}{elem9}
+%\ganttlink{elem3}{elem4}
+
+\end{ganttchart}
+\caption{Engineering Plan Fire Protection}
+\label{firealarm}
+\end{figure*}
+\end{document}
