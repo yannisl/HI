@@ -1,0 +1,96 @@
+%%
+%% This is file `HS.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% HS.dtx  (with options: `package')
+%% 
+%% This is a generated file.
+%% 
+%% Copyright (C) 2012 Yannis Lazarides <y.lazarides@habtoorspecon.com>
+%% -------------------------------------------------------
+%% 
+%% This package may be distributed and/or modified under the conditions
+%% of the LaTeX Project Public License, either version 1.3c of this
+%% license or (at your option) any later version.  The latest version of
+%% this license is in
+%% 
+%%    http://www.latex-project.org/lppl.txt
+%% 
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 2008/05/04 or later.
+%% 
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\ProvidesPackage{HS}
+    [2012/01/13 v1.0 Utilities for typesetting letters]
+\newcommand{\Date}[2][\today]{
+ \if!#2! #1 \else\today \fi
+ \vspace{2\baselineskip}
+}
+\newcommand{\OurRef}[1]{%
+ \par\leavevmode#1
+ \vspace{2\baselineskip}
+}
+
+\newcommand{\TO}[1][Test]{
+ \leavevmode\par
+ Mr. Geoff Walker\\
+ MEP Manager\\
+ M/s Habtoor Leighton Group\\
+ Al Habtoor Leighton LLC\\
+P O Box 10869\\
+Dubai\\
+UAE
+ \par
+ \vspace{2\baselineskip}
+ Dear Sir
+ \vspace{\baselineskip}
+}
+
+\newcommand{\TOMCD}[1][Test]{
+ \leavevmode\par
+ Mr. Mohammad Azzam\\
+ Mr. Marios Charalambous\\
+ M/s HLS-DSI JV\\
+Dubai\\
+UAE\\
+\\
+BY HAND
+ \par
+ \vspace{2\baselineskip}
+ Dear Sir
+ \vspace{\baselineskip}
+}
+
+
+\newlength\tempindent
+\settowidth\tempindent{Sub:\hspace{1em}}
+
+
+\newcommand{\RE}[2][]{%
+  \parskip0pt\par\noindent
+  \hangindent\tempindent
+  \textbf{#2}
+  }
+\newcommand{\YL}{
+\leavevmode\par
+Yours faithfully,\\
+For HLS-DSI JV\par
+\vskip2\baselineskip
+Dr. Yiannis Lazarides\\
+Habtoor City Project, Dubai\\
+Project Director\\
+\vskip1.3\baselineskip
+}
+\newcommand{\encl}{%
+\leavevmode\par
+D\&S HO\\
+HLS HO\\
+}
+
+
+
+\endinput
+%%
+%% End of file `HS.sty'.

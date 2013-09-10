@@ -39,6 +39,9 @@
 *.xcf
 *.gz(busy)
 *.db
+*.pdf
+*.xls
+*.docx
 
 #netbeans files
 #properties

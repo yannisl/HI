@@ -1,0 +1,80 @@
+
+%\documentclass[a4paper]{book}
+%\usepackage{booktabs,tabularx}
+%\usepackage{pgfgantt}
+%\begin{document}
+\chapter{Fire Protection}
+\section{Fire Protection}
+
+Fire Protection constraints, currently include better definition of scope, ID and RCP drawings and resolution of Value Engineering elements in the basements, where HLS has proposed savings based on the provision of Jet Fans for Car Park Ventilation. The constraints hamper full co-ordination of services, especially in the basements where work fronts are open or are expected to open soon for site works. A preliminary plan is shown in Figure~\ref{fireprotection}.
+\begin{table}[h]
+\caption{Fire Protection Constraints and Key Dates}
+\begin{tabular}{llc}
+\toprule
+Constraint         & Expected Resolution Date & Action By\\
+\midrule
+Jet Fan resolution & &\\
+ID Typical Rooms   & & ID\\
+Corridor High Rise & & ID\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The plan aims to complete the first round of Shop Drawings by end January 2013. The plan does not factor at this stage, the full submittal and approval process which we have lumped as adding only one consecutive month to the process.
+
+\section{Planning Rationale and Priority Areas}
+
+The plan gives priority to the basements and high-rise areas. Between them they cover approximately  two thirds (235,873 m$^2$) of the total development area (350,000 m$^2$). Although we expect that the difficult areas will be the Podia, we left these areas last to give the ID Professional Team time to develop the design. 
+
+
+
+
+
+\pagestyle{empty}
+
+\begin{figure*}[htbp]
+\hspace*{-1.8cm}
+\begin{ganttchart}[y unit chart=.8cm]{24}
+
+\gantttitle{Sep 2012-Feb 2013}{24} \\
+\gantttitle{Fire Protection Shop Drawing Planning}{24} \\
+\gantttitlelist{1,...,24}{1} \\
+
+
+\ganttgroup{Group 1}{1}{7} \\
+
+\ganttmilestone{Appoint Fire Specialist Firm}{4} \ganttnewline
+
+\ganttlinkedbar[bar/.style={fill=purple}]{FP CAD Mobilization}{5}{6} \\
+
+\ganttlinkedbar[bar/.style={fill=orange}]{Plantroom Drgs}{7}{11} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{Shafts and Schematics}{7}{11} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{Architectural Details}{7}{11} \ganttnewline
+
+\ganttmilestone[bar/.style={fill=orange}]{RCP/ID Typical Rooms}{6} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{W-typical rooms}{7}{11} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{Westdene typical rooms}{7}{11} \ganttnewline
+
+\ganttmilestone[bar/.style={fill=orange}]{RCP/ID Corridors/Lobbies}{11} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{W-highrise}{12}{16} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{Westdene highrise}{12}{16} \ganttnewline
+
+\ganttmilestone{Alternative Jet Fans}{7} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{Podia B3}{8}{12} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{Podia B2}{8}{12} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{Podia B1}{8}{12} \ganttnewline
+
+\ganttmilestone{ID/RCP}{16} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{W-GF}{17}{21} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{Westdene GF}{17}{21} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{St Regis GF}{17}{21} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{St Regis L1-2}{17}{21} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{St Regis L3-4}{17}{21} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{St Regis L5-6}{17}{21} \ganttnewline
+
+
+\end{ganttchart}
+\caption{Engineering Plan Fire Protection}
+\label{fireprotection}
+\end{figure*}
+%\end{document}

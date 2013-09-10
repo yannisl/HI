@@ -1,0 +1,325 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+
+\documentclass[a4paper, oneside, 
+               justified=true, sfsidenotes]{tufte-book} 
+
+\usepackage[utf8]{inputenc} % set input encoding to utf8
+\usepackage[english]{babel}[2005/11/23]
+%\usepackage{phd}
+
+%% Bibliography
+\usepackage{natbib}
+% useful to write files on the fly
+
+\bibliographystyle{plainnat} % note the change here
+\bibpunct{(}{)}{;}{a}{,}{,}
+
+
+\usepackage{verbatim, booktabs}
+\usepackage{caption}
+\DeclareCaptionFont{blue}{\color{black}\small}
+
+\captionsetup{justification=raggedright, singlelinecheck=false,
+                     font={blue,sf,small}}
+
+
+%overwrite tufte and have numbering
+\setcounter{secnumdepth}{5}
+
+%% Change some of the looks
+%%% CHAPTER STYLES AND SECTION STYLES
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]%
+{\markboth{\MakeUppercase{\chaptertitlename\ \thechapter\ #1}}{}} 
+\renewcommand{\sectionmark}[1]%
+{\markright{\MakeUppercase{\thesection~\ #1}}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\newcommand{\helv}{%
+\fontfamily{phv}\fontseries{b}\fontsize{9}{11}\selectfont}
+\fancyhf{}
+\fancyhead[LE,RO]{\helv \thepage}
+\fancyhead[LO]{\helv \rightmark}
+\fancyhead[RE]{\helv \leftmark}
+
+
+% Typesets the font size, leading, and measure in the form of 10/12x26 pc.
+%\newcommand{\measure}[3]{#1/#2$\times$\unit[#3]{pc}}
+
+% Macros for typesetting the documentation
+
+
+\newcommand{\hlred}[1]{\textcolor{Maroon}{#1}}% prints in red
+
+\newcommand{\hlmaroon}[1]{\textcolor{Maroon}{#1}}%print maroon
+
+
+%\newcommand{\hangleft}[1]{\makebox[0pt][r]{#1}}
+
+
+
+
+%\newcommand{\hairsp}{\hspace{1pt}}% hair space
+%\newcommand{\hquad}{\hskip0.5em\relax}% half quad space
+%\newcommand{\TODO}{\textcolor{red}{\bf TODO!}\xspace}
+%
+%\newcommand{\ie}{\textit{i.\hairsp{}e.}\xspace}
+%\newcommand{\eg}{\textit{e.\hairsp{}g.}\xspace}
+
+
+
+
+
+% Generates the index we use before the
+% out
+\usepackage{makeidx}
+\makeindex
+
+
+
+%%% ACTIVITY DATES
+%% Define a new command for activity key-dates
+%% this can be saved for shipout later
+\newcommand{\keydate}[2]{#1  #2 \\}
+\newcommand{\out}[2]{%
+  {\index{key dates!#1}% add to index
+\immediate\write\tempfile{\noexpand\keydate{ #1}{#2}}}}
+
+
+%% We open the file to  to write the key-dates
+%% we will use it later to import
+\newwrite\tempfile
+\immediate\openout\tempfile=keydates.tex
+
+
+\usepackage{fancyvrb}
+
+
+%%% Set some local commands and colors
+%\usepackage{colortbl}
+%\definecolor{green}{rgb}{0.1,0.1,0.1}
+%%\color{green!40!yellow})
+
+
+\newcounter{sectionstep}
+\setcounter{sectionstep}{0}
+
+\def\tablesection{%
+  \midrule
+  \stepcounter{step}%
+  \setcounter{sectionstep}{-1}%
+  \setcounter{sectionstep}{-1}%
+}
+
+\def\Inc{%
+  \stepcounter{sectionstep}%
+\thestep.0\thesectionstep%
+}
+
+
+\makeatletter
+\def\chapter{\clearpage\thispagestyle{plain}\global\@topnum
+  \z@\@afterindentfalse
+  \secdef\@chapter\@schapter
+}
+\makeatother
+
+
+\title{PLANNING\\REPORT FOR MEP}
+\author{Habtoor Island Project}
+\publisher{HLS/DSI JV}
+\date{26 Aug 2013} % Delete this line to display the current date
+
+%\newcounter{step}
+%\def\inc{\stepcounter{step}\thestep}
+
+% shorthands for typing equipment numbers
+% that make sense.
+\def\panel#1{{\inc\space\space\small\texttt{#1}}}
+
+\def\EI#1{\texttt{EI}}
+\DeclareRobustCommand\refs[1]{\S\hskip0.5pt\ref{#1}}
+
+\DeclareRobustCommand\WIR{{\Large\WritingHand}}
+
+
+\usepackage[smaller,printonlyused,withpage]{acronym}
+
+\usepackage{hyperref}
+\hypersetup{%draft, % = no hyperlinking at all (useful in b/w printouts)
+    colorlinks=true, linktocpage=true, pdfstartpage=1, pdfstartview=FitV,%
+    % uncomment the following line if you want to have black links (e.g., for printing)
+    %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,% 
+linktocpage=true,  breaklinks=true, pdfpagemode=UseNone, pageanchor=true,  pdfpagemode=UseOutlines,%
+    plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+    hypertexnames=true, pdfhighlight=/O,hyperfootnotes=true,%nesting=true,%frenchlinks,%
+    urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen, %pagecolor=RoyalBlue,%
+    %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+    pdftitle={Closure and Commissioning Plan},%
+    pdfauthor={Dr Y Lazarides},%
+    pdfsubject={City Center, report},%
+    pdfkeywords={},%
+    pdfcreator={pdfLaTeX},%
+    pdfproducer={LaTeX with hyperref and classicthesis}%
+} 
+  
+\let\ch\checkmark
+\def\fire{{\LARGE\color{red}\Fire}}
+\def\Danger{{\LARGE\color{red}\danger}}
+\long\def\askar{\parbox{4cm}{\Danger \RaggedRight Askar condensers.}}
+\usepackage{pgfgantt}
+\makeatletter
+
+\makeatother
+\begin{document}
+
+% Front matter
+\frontmatter
+
+\maketitle
+%\tableofcontents
+%\listoffigures
+%\listoftables
+
+
+\mainmatter
+\input{./sections/introduction}
+\input{./sections/fire-plan}
+\end{document}
+
+
+\input{./sections/civildefence}
+\input{./sections/firealarm-01}
+\input{./Sections/firefighting-02}
+\input{./Sections/staircasepressurization-01}
+\input{./Sections/kitchenextract-01}
+\input{./Sections/chilledwater-01}
+\input{./Sections/UPS-02}
+\input{./Sections/bms-02} 
+\input{./Sections/pabx}
+\input{./Sections/HVAC}
+\input{./Sections/electrical-02}
+\input{./Sections/carparkventilation-02}
+\input{./Sections/drainage-02}
+\input{./Sections/CCTV}
+\input{./Sections/generators-02}
+\input{./Sections/domestic-02}
+\input{./Sections/domestichot-02}
+\input{./Sections/gas}
+\input{./Sections/towers-rotana-02}
+\input{./Sections/towers-shangrila-02}
+\input{./Sections/towers-merweb-02}
+
+\addcontentsline{toc}{chapter}{Acronyms and Abbreviations}
+\chapter*{Acronyms and Abbreviations}
+
+\begin{acronym}[TDMA]
+\acro{ATS}{Automatic Transfer Switch}
+\acro{APS}{Auxiliary Power Supply}
+\acro{PABX}{Private Automatic Branch Exchange}
+\acro{BMS}{Building Management System}
+\acro{ECU}{Ecological Unit}
+\acro{EI}{Engineer's Instruction}
+\acro{FACP}{Fire Alarm Control Panel}
+\acro{FCU}{Fan Coil Unit}
+\acro{AHU}{Air Handling Unit}
+\acro{HWS}{Hot Water System}
+\acro{MDF}{Medium Distribution Frame}
+\acro{IDF}{Individual Distribution Frame}
+\acro{ELV}{Electrical Low Voltage}
+\acro{TC}{Testing and Commissioning}
+\acro{UPS}{Uninterruptable Power Supply}
+\acro{UNC}{Universal Network Controller}
+\acro{ODC}{Owner's Direct Subcontractor}
+\acro{RCU}{Room Control Unit}
+\acro{TRO}{Tower Rotana}
+\acro{HLS}{Habtoor Leighton Specon}
+\acro{HLG}{Habtoor Leighton Group}
+\end{acronym}
+\end{document}
+
+
+\end{document}
+%Main files start here
+\mainmatter 
+
+%\input{./Sections/CTC}
+%\input{./Sections/Materials}
+\input{./Sections/introduction}
+%\input{./Sections/towers}
+
+%
+%
+\input{./Sections/Podium-03}
+%
+
+%\input{./Sections/kahraama}
+%
+%
+
+%\input{./Sections/smokeexhaust}
+
+
+
+
+%
+
+
+%\input{./Sections/listofservices-02}
+
+
+%\input{./Sections/lvsystems}
+
+
+%% ADD SIGNAGE
+
+%\input{./Sections/civildefence}
+\end{document}
+%\input{./Sections/municipalconnections}
+
+%\input{./sections/logistics}
+%\appendix
+
+
+%\input{./Sections/gantcharts}
+%\input{./Sections/charts}
+%\input{/.Sections/heatgains}
+
+\input{./Sections/mechanicalengineers}
+%% Example
+%% 
+   
+   \out{Close Ceilings Rotana Floor 10}{Line 2}
+   \out{Rotana,  power-on}{12$^{th}$ Sept 2010}
+   \out{Rotana Qatar Cool switch-on}{12th September}
+
+
+%% we now read the file and dostuff with it
+%% 
+\chapter{Summary of  Key Dates}
+\immediate\closeout\tempfile
+\input{keydates}
+
+
+
+\backmatter
+%\bibliography{sample-handout}
+%\bibliographystyle{plainnat}
+\printindex
+
+
+
+%% finally we close the file
+%%
+
+
+
+
+\end{document}
+
+·         Wim Raath- Corporate QHSE director- Wim.Raath@drakescull.com
+·         Yasir Wafi- QHSE Manager -Yasir.Wafi@drakescull.com
+·         Arumugan Manoharan – Projects QA/QC manager  -Arumugam.Manoharan@drakescull.com
+
