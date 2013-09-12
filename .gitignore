@@ -32,7 +32,7 @@
 *.xdy
 *.tdo
 *.hd
-*.jpg
+#*.jpg
 *.png
 *.gz
 *.gif
