@@ -1,10 +1,26 @@
 \documentclass[a4paper,11pt,oneside]{article}
-\usepackage[left=2.5cm,right=2.0cm,top=1cm,bottom=2.0cm]{geometry}
-\usepackage{HS}
+\usepackage[left=2.5cm,right=2.0cm,top=2cm,bottom=2.0cm]{geometry}
+\usepackage{HS,lipsum}
+\usepackage{graphicx}
+\usepackage{lastpage}
 
+
+\parindent0pt
+\def\signature{%
+ \YL\encl}
+\def\defaultfont{\sffamily}
+%% headings
+% we default to plain - left justify
+\makeatletter
+\def\ps@plain{%
+ \let\@oddhead\@empty
+ \def\@oddfoot{\hfill \footnotesize \sffamily Page \textsf{\thepage} of \pageref{LastPage}}%
+ \def\@evenfoot{\hfill\footnotesize \sffamily Page \textsf{thepage} of \pageref{LastPage} }}
+\pagestyle{plain}
+\makeatother
 \begin{document}
-%\sffamily
-%\mbox{}
+\sffamily
+\mbox{}
 \includegraphics[width=\textwidth]{JVlogo.PNG}
 \vspace{1em}
 
@@ -14,7 +30,7 @@
 
 \TOMCD
 
-\RE{Material Request: Gray Water}
+\RE{Material Request: Pumps}
 
 \setlength{\parskip}{\baselineskip}
 
@@ -25,8 +41,7 @@ We attach the following documentation for the enquiry.
 
 \begin{enumerate}
 
-\item Specification (Incorporated in Compliance Statement)
-\item Full Mechanical and Electrical Specification
+\item Specification
 \item List of Suppliers
 \item Compliance Statement
 \end{enumerate}

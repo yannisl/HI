@@ -24,6 +24,10 @@
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
 \ProvidesPackage{HS}
     [2012/01/13 v1.0 Utilities for typesetting letters]
+
+\RequirePackage{lastpage}
+\RequirePackage{graphicx}
+\RequirePackage{lipsum}
 \newcommand{\Date}[2][\today]{
  \if!#2! #1 \else\today \fi
  \vspace{2\baselineskip}
@@ -77,7 +81,8 @@ BY HAND
 \leavevmode\par
 Yours faithfully,\\
 For HLS-DSI JV\par
-\vskip2\baselineskip
+%\vskip\baselineskip
+\includegraphics[width=4cm]{DRYL.jpg}\\
 Dr. Yiannis Lazarides\\
 Habtoor City Project, Dubai\\
 Project Director\\
@@ -89,8 +94,23 @@ D\&S HO\\
 HLS HO\\
 }
 
-
-
+\parindent0pt
+\long\def\signature{%
+\YL
+\encl}
+\def\defaultfont{\sffamily}
+%% headings
+% we default to plain - left justify
+\def\ps@plain{%
+ \let\@oddhead\@empty
+ \def\@oddfoot{\hfill \footnotesize \sffamily Page \textsf{\thepage} of \pageref{LastPage}}%
+ \def\@evenfoot{\hfill\footnotesize \sffamily Page \textsf{thepage} of \pageref{LastPage} }}
+\pagestyle{plain}
+\sffamily
+\AtBeginDocument{%
+\mbox{}
+\vspace{1em}
+}
 \endinput
 %%
 %% End of file `HS.sty'.
