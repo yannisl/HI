@@ -32,10 +32,7 @@
  \if!#2! #1 \else\today \fi
  \vspace{2\baselineskip}
 }
-\newcommand{\OurRef}[1]{%
- \par\leavevmode#1
- \vspace{2\baselineskip}
-}
+
 
 \newcommand{\TO}[1][Test]{
  \leavevmode\par
@@ -111,6 +108,49 @@ HLS HO\\
 \mbox{}
 \vspace{1em}
 }
+\newcounter{total}
+\def\refprefix{HS-142/HLG/YL/mr/}
+%% First time use
+\IfFileExists{autoincrementtotals.lcl}{}{\newwrite\tempfile
+	\immediate\openout\tempfile=autoincrementtotals.lcl
+	\immediate\write\tempfile{\thetotal}%
+	\immediate\closeout\tempfile}
+\def\autoinc{%
+     	\newread\inputstream
+     	\immediate\openin\inputstream=\jobname.lcl
+     	\immediate\read\inputstream to \auxcommand
+     	\immediate\closeout\inputstream
+   	\gdef\OurRef{\leavevmode\refprefix\auxcommand\par}
+       
+}
+%% First we check if a file with the jobname exists holding the RefNumber
+%% If it does not exist increment the totalizer and write to file
+\IfFileExists{\jobname.lcl}{\autoinc}{%
+%% Read totals from file
+       	\newread\inputstream
+        \immediate\openin\inputstream=autoincrementtotals.lcl
+        \immediate\read\inputstream to \auxcommand
+        \immediate\closeout\inputstream
+	\setcounter{total}{\auxcommand}        
+	\stepcounter{total}
+%% Update totals file
+	\newwrite\tempfile
+	\immediate\openout\tempfile=autoincrementtotals.lcl
+	\immediate\write\tempfile{\thetotal}%
+	\immediate\closeout\tempfile
+
+	\gdef\OurRef{\leavevmode\refprefix\thetotal\par}
+	%% write to jobname.lcl
+	\newwrite\tempfile
+	\immediate\openout\tempfile=\jobname.lcl
+	\immediate\write\tempfile{\thetotal}%
+	\immediate\closeout\tempfile
+}
+
 \endinput
 %%
 %% End of file `HS.sty'.
+%\newcommand{\OurRef}[1]{%
+% \par\leavevmode#1
+% \vspace{2\baselineskip}
+%}
