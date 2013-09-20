@@ -1,0 +1,96 @@
+
+%\documentclass[a4paper]{book}
+%\usepackage{booktabs,tabularx}
+%\usepackage{pgfgantt}
+%\begin{document}
+\chapter{Westdin}
+
+The Westdin Tower guest-room floors will be divided into:
+
+\begin{description}
+\item[Guest Rooms] From the point of view of planning and construction, the rooms will be divided into vestibules, bathrooms and bedrooms, each requiring different milestones, before being handed over to MEP and vice-versa.
+\item [Corridors] are services intensive and ceiling voids are constrained in terms of allowable height. Again here work has to be planned in two sections (ceiling services) and wall services. For walls partitioning stubs need to be up, before we can install electrical conduits, where some ceiling services should preferably be installed earlier.
+\item [Lift Lobbies] First fix for these areas does not present any major issues, but second and final fix are affected due to the pace of lift installations and closure of shafts.
+\item [Back-of-house]
+\item [Electrical Rooms] These rooms will have MEP services installed at a different pace than the rest of the floors, as some activities such as busbars and cable pulling can only start once all the floors are completed. They will also require a higher standard of finish, before MEP activities can start.
+\item [Shafts] Shafts, on high-rise floors can be divided into three parts (main-shafts), electrical shafts and guest-room shafts.
+\end{description}
+
+
+\section{Current Information Constraints}
+
+
+
+
+\begin{table}[h]
+\caption{Current Constraints and Information cut-off Key Dates}
+\begin{tabular}{llcp{3.8cm}}
+\toprule
+Constraint         &  Date & Action By & Remarks\\
+\midrule
+ID Typical Rooms   & & ID& This should also include furniture layouts in order to place electrical services accurately.\\
+Corridor High Rise & & ID&     \\
+ID Typical Rooms   & & RCPs&   \\
+Corridor High Rise & & RCPs&  \\
+Wet areas (tiling layouts) & & &\\  
+Wet areas (sanitary fittings) & & &\\
+Release of all PS  & &      & This should be done as early as possible to avoid delays in ceiling and wall closures and most importantly to enable full co-ordination of services.\\       
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Planning Rationale and Priority Areas}
+
+
+
+\pagestyle{empty}
+
+\section{Activities Sequencing}
+
+\begin{figure*}[htbp]
+\hspace*{-1.8cm}
+\begin{ganttchart}[y unit chart=.8cm]{24}
+
+\gantttitle{Sep 2012-Feb 2013}{24} \\
+\gantttitle{Fire Protection Shop Drawing Planning}{24} \\
+\gantttitlelist{1,...,24}{1} \\
+
+
+\ganttgroup{Group 1}{1}{7} \\
+
+\ganttmilestone{Appoint Fire Specialist Firm}{4} \ganttnewline
+
+\ganttlinkedbar[bar/.style={fill=purple}]{FP CAD Mobilization}{5}{6} \\
+
+\ganttlinkedbar[bar/.style={fill=orange}]{Plantroom Drgs}{7}{11} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{Shafts and Schematics}{7}{11} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{Architectural Details}{7}{11} \ganttnewline
+
+\ganttmilestone[bar/.style={fill=orange}]{RCP/ID Typical Rooms}{6} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{W-typical rooms}{7}{11} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{Westdene typical rooms}{7}{11} \ganttnewline
+
+\ganttmilestone[bar/.style={fill=orange}]{RCP/ID Corridors/Lobbies}{11} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{W-highrise}{12}{16} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{Westdene highrise}{12}{16} \ganttnewline
+
+\ganttmilestone{Alternative Jet Fans}{7} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{Podia B3}{8}{12} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{Podia B2}{8}{12} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{Podia B1}{8}{12} \ganttnewline
+
+\ganttmilestone{ID/RCP}{16} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{W-GF}{17}{21} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{Westdene GF}{17}{21} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{St Regis GF}{17}{21} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{St Regis L1-2}{17}{21} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{St Regis L3-4}{17}{21} \ganttnewline
+\ganttlinkedbar[bar/.style={fill=orange}]{St Regis L5-6}{17}{21} \ganttnewline
+
+
+\end{ganttchart}
+\caption{Engineering Plan Fire Protection}
+\label{fireprotection}
+\end{figure*}
+%\end{document}
